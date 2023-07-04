@@ -22,20 +22,10 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.CoffeShopManagementSystemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageCoffeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewOrderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CancelOrderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txt_search = New System.Windows.Forms.TextBox()
+        Me.Btn_Pay = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,147 +33,51 @@ Partial Class Form1
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.MenuStrip1.SuspendLayout()
+        Me.lbl_total = New System.Windows.Forms.Label()
+        Me.btn_ManageCoffee = New System.Windows.Forms.Button()
+        Me.Btn_NewOrder = New System.Windows.Forms.Button()
+        Me.Btn_CancelOrder = New System.Windows.Forms.Button()
+        Me.Btn_report = New System.Windows.Forms.Button()
+        Me.Btn_Exit = New System.Windows.Forms.Button()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.lbl_orderno = New System.Windows.Forms.Label()
+        Me.lbl_OrderDate = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'MenuStrip1
+        'txt_search
         '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.DarkGoldenrod
-        Me.MenuStrip1.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
-        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CoffeShopManagementSystemToolStripMenuItem, Me.ManageCoffeToolStripMenuItem, Me.NewOrderToolStripMenuItem, Me.CancelOrderToolStripMenuItem, Me.ReportToolStripMenuItem, Me.ExitToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 24)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1264, 33)
-        Me.MenuStrip1.TabIndex = 0
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.txt_search.Location = New System.Drawing.Point(23, 129)
+        Me.txt_search.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txt_search.Name = "txt_search"
+        Me.txt_search.Size = New System.Drawing.Size(328, 22)
+        Me.txt_search.TabIndex = 4
         '
-        'CoffeShopManagementSystemToolStripMenuItem
+        'Btn_Pay
         '
-        Me.CoffeShopManagementSystemToolStripMenuItem.BackColor = System.Drawing.Color.DarkGoldenrod
-        Me.CoffeShopManagementSystemToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CoffeShopManagementSystemToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CoffeShopManagementSystemToolStripMenuItem.Name = "CoffeShopManagementSystemToolStripMenuItem"
-        Me.CoffeShopManagementSystemToolStripMenuItem.Size = New System.Drawing.Size(306, 29)
-        Me.CoffeShopManagementSystemToolStripMenuItem.Text = "Coffe Shop Management System"
-        '
-        'ManageCoffeToolStripMenuItem
-        '
-        Me.ManageCoffeToolStripMenuItem.BackColor = System.Drawing.Color.DarkGoldenrod
-        Me.ManageCoffeToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ManageCoffeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ManageCoffeToolStripMenuItem.Name = "ManageCoffeToolStripMenuItem"
-        Me.ManageCoffeToolStripMenuItem.Size = New System.Drawing.Size(203, 29)
-        Me.ManageCoffeToolStripMenuItem.Text = "           Manage Coffe"
-        '
-        'NewOrderToolStripMenuItem
-        '
-        Me.NewOrderToolStripMenuItem.BackColor = System.Drawing.Color.DarkGoldenrod
-        Me.NewOrderToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NewOrderToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.NewOrderToolStripMenuItem.Name = "NewOrderToolStripMenuItem"
-        Me.NewOrderToolStripMenuItem.Size = New System.Drawing.Size(150, 29)
-        Me.NewOrderToolStripMenuItem.Text = "      New Order"
-        '
-        'CancelOrderToolStripMenuItem
-        '
-        Me.CancelOrderToolStripMenuItem.BackColor = System.Drawing.Color.DarkGoldenrod
-        Me.CancelOrderToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CancelOrderToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CancelOrderToolStripMenuItem.Name = "CancelOrderToolStripMenuItem"
-        Me.CancelOrderToolStripMenuItem.Size = New System.Drawing.Size(168, 29)
-        Me.CancelOrderToolStripMenuItem.Text = "      Cancel Order"
-        '
-        'ReportToolStripMenuItem
-        '
-        Me.ReportToolStripMenuItem.BackColor = System.Drawing.Color.DarkGoldenrod
-        Me.ReportToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ReportToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
-        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(117, 29)
-        Me.ReportToolStripMenuItem.Text = "      Report"
-        '
-        'ExitToolStripMenuItem
-        '
-        Me.ExitToolStripMenuItem.BackColor = System.Drawing.Color.DarkGoldenrod
-        Me.ExitToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ExitToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(195, 29)
-        Me.ExitToolStripMenuItem.Text = "                           Exit"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(21, 92)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(106, 20)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Order No    :"
-        '
-        'MenuStrip2
-        '
-        Me.MenuStrip2.BackColor = System.Drawing.Color.DarkGoldenrod
-        Me.MenuStrip2.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
-        Me.MenuStrip2.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip2.Name = "MenuStrip2"
-        Me.MenuStrip2.Size = New System.Drawing.Size(1264, 24)
-        Me.MenuStrip2.TabIndex = 2
-        Me.MenuStrip2.Text = "MenuStrip2"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(21, 127)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 20)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Order Date :"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(26, 161)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(368, 26)
-        Me.TextBox1.TabIndex = 4
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(26, 202)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(614, 493)
-        Me.RichTextBox1.TabIndex = 5
-        Me.RichTextBox1.Text = ""
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.DarkGoldenrod
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(661, 647)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(568, 48)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Pay"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Btn_Pay.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.Btn_Pay.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Pay.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Btn_Pay.Location = New System.Drawing.Point(588, 518)
+        Me.Btn_Pay.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Pay.Name = "Btn_Pay"
+        Me.Btn_Pay.Size = New System.Drawing.Size(505, 38)
+        Me.Btn_Pay.TabIndex = 7
+        Me.Btn_Pay.Text = "Pay"
+        Me.Btn_Pay.UseVisualStyleBackColor = False
         '
         'DataGridView1
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4})
-        Me.DataGridView1.Location = New System.Drawing.Point(661, 163)
+        Me.DataGridView1.Location = New System.Drawing.Point(588, 136)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 62
         Me.DataGridView1.RowTemplate.Height = 28
-        Me.DataGridView1.Size = New System.Drawing.Size(568, 472)
+        Me.DataGridView1.Size = New System.Drawing.Size(593, 378)
         Me.DataGridView1.TabIndex = 8
         '
         'Column1
@@ -220,9 +114,9 @@ Partial Class Form1
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.DarkGoldenrod
-        Me.Label3.Location = New System.Drawing.Point(133, 92)
+        Me.Label3.Location = New System.Drawing.Point(118, 100)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(89, 20)
+        Me.Label3.Size = New System.Drawing.Size(80, 17)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "20220052"
         '
@@ -232,66 +126,137 @@ Partial Class Form1
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label4.Location = New System.Drawing.Point(133, 127)
+        Me.Label4.Location = New System.Drawing.Point(28, 65)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(99, 20)
+        Me.Label4.Size = New System.Drawing.Size(90, 17)
         Me.Label4.TabIndex = 10
-        Me.Label4.Text = "29/06/2023"
+        Me.Label4.Text = "Order No  :"
         '
-        'Label5
+        'lbl_total
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.DarkGoldenrod
-        Me.Label5.Location = New System.Drawing.Point(1198, 117)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(31, 32)
-        Me.Label5.TabIndex = 11
-        Me.Label5.Text = "0"
+        Me.lbl_total.AutoSize = True
+        Me.lbl_total.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_total.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_total.ForeColor = System.Drawing.Color.DarkGoldenrod
+        Me.lbl_total.Location = New System.Drawing.Point(996, 90)
+        Me.lbl_total.Name = "lbl_total"
+        Me.lbl_total.Size = New System.Drawing.Size(27, 29)
+        Me.lbl_total.TabIndex = 11
+        Me.lbl_total.Text = "0"
+        '
+        'btn_ManageCoffee
+        '
+        Me.btn_ManageCoffee.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.btn_ManageCoffee.Location = New System.Drawing.Point(324, 1)
+        Me.btn_ManageCoffee.Name = "btn_ManageCoffee"
+        Me.btn_ManageCoffee.Size = New System.Drawing.Size(139, 49)
+        Me.btn_ManageCoffee.TabIndex = 12
+        Me.btn_ManageCoffee.Text = "Manage Coffe"
+        Me.btn_ManageCoffee.UseVisualStyleBackColor = False
+        '
+        'Btn_NewOrder
+        '
+        Me.Btn_NewOrder.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.Btn_NewOrder.Location = New System.Drawing.Point(488, 1)
+        Me.Btn_NewOrder.Name = "Btn_NewOrder"
+        Me.Btn_NewOrder.Size = New System.Drawing.Size(139, 49)
+        Me.Btn_NewOrder.TabIndex = 13
+        Me.Btn_NewOrder.Text = "New Order"
+        Me.Btn_NewOrder.UseVisualStyleBackColor = False
+        '
+        'Btn_CancelOrder
+        '
+        Me.Btn_CancelOrder.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.Btn_CancelOrder.Location = New System.Drawing.Point(651, 1)
+        Me.Btn_CancelOrder.Name = "Btn_CancelOrder"
+        Me.Btn_CancelOrder.Size = New System.Drawing.Size(139, 49)
+        Me.Btn_CancelOrder.TabIndex = 14
+        Me.Btn_CancelOrder.Text = "Cancel Order"
+        Me.Btn_CancelOrder.UseVisualStyleBackColor = False
+        '
+        'Btn_report
+        '
+        Me.Btn_report.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.Btn_report.Location = New System.Drawing.Point(823, 1)
+        Me.Btn_report.Name = "Btn_report"
+        Me.Btn_report.Size = New System.Drawing.Size(139, 49)
+        Me.Btn_report.TabIndex = 15
+        Me.Btn_report.Text = "Report"
+        Me.Btn_report.UseVisualStyleBackColor = False
+        '
+        'Btn_Exit
+        '
+        Me.Btn_Exit.BackColor = System.Drawing.Color.Red
+        Me.Btn_Exit.Location = New System.Drawing.Point(984, 1)
+        Me.Btn_Exit.Name = "Btn_Exit"
+        Me.Btn_Exit.Size = New System.Drawing.Size(139, 49)
+        Me.Btn_Exit.TabIndex = 16
+        Me.Btn_Exit.Text = "Exit"
+        Me.Btn_Exit.UseVisualStyleBackColor = False
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(22, 156)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(560, 400)
+        Me.FlowLayoutPanel1.TabIndex = 17
+        '
+        'Timer1
+        '
+        '
+        'lbl_orderno
+        '
+        Me.lbl_orderno.AutoSize = True
+        Me.lbl_orderno.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_orderno.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_orderno.Location = New System.Drawing.Point(118, 65)
+        Me.lbl_orderno.Name = "lbl_orderno"
+        Me.lbl_orderno.Size = New System.Drawing.Size(53, 17)
+        Me.lbl_orderno.TabIndex = 1
+        Me.lbl_orderno.Text = "12312"
+        '
+        'lbl_OrderDate
+        '
+        Me.lbl_OrderDate.AutoSize = True
+        Me.lbl_OrderDate.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_OrderDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_OrderDate.Location = New System.Drawing.Point(19, 102)
+        Me.lbl_OrderDate.Name = "lbl_OrderDate"
+        Me.lbl_OrderDate.Size = New System.Drawing.Size(99, 17)
+        Me.lbl_OrderDate.TabIndex = 3
+        Me.lbl_OrderDate.Text = "Order Date :"
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkGoldenrod
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(1264, 720)
-        Me.Controls.Add(Me.Label5)
+        Me.ClientSize = New System.Drawing.Size(1183, 576)
+        Me.Controls.Add(Me.FlowLayoutPanel1)
+        Me.Controls.Add(Me.Btn_Exit)
+        Me.Controls.Add(Me.Btn_report)
+        Me.Controls.Add(Me.Btn_CancelOrder)
+        Me.Controls.Add(Me.Btn_NewOrder)
+        Me.Controls.Add(Me.btn_ManageCoffee)
+        Me.Controls.Add(Me.lbl_total)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.RichTextBox1)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.MenuStrip2)
-        Me.MainMenuStrip = Me.MenuStrip1
+        Me.Controls.Add(Me.Btn_Pay)
+        Me.Controls.Add(Me.txt_search)
+        Me.Controls.Add(Me.lbl_OrderDate)
+        Me.Controls.Add(Me.lbl_orderno)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Form1"
         Me.Text = "Form1"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents CoffeShopManagementSystemToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ManageCoffeToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NewOrderToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CancelOrderToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Label1 As Label
-    Friend WithEvents MenuStrip2 As MenuStrip
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents RichTextBox1 As RichTextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents txt_search As TextBox
+    Friend WithEvents Btn_Pay As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
@@ -299,5 +264,14 @@ Partial Class Form1
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lbl_total As Label
+    Friend WithEvents btn_ManageCoffee As Button
+    Friend WithEvents Btn_NewOrder As Button
+    Friend WithEvents Btn_CancelOrder As Button
+    Friend WithEvents Btn_report As Button
+    Friend WithEvents Btn_Exit As Button
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents lbl_orderno As Label
+    Friend WithEvents lbl_OrderDate As Label
 End Class
